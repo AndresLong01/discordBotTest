@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+require('dotenv').config()
 
 const client = new Discord.Client();
 
@@ -15,4 +16,4 @@ client.on('message', text => {
   console.log("Sent By:", text.author.username)
   console.log("In channel:", text.channel.name)
 })
-client.login('MTgxODM3ODIzNTEzNDYwNzM2.VzoTqw.R8CxJv-RwZFZZVsStp7azsW72So');
+client.login(process.env.TOKEN);
